@@ -1,5 +1,13 @@
 package com.mcs;
 
+
+/**
+ * @author mochangsheng
+ * @version 1.0
+ * @description 插入排序
+ * @created 2017/2/17
+ * @changeRecord [修改记录] <br/>
+ */
 public class InsertSort extends Sort {
 
     public static void main(String[] arg) {

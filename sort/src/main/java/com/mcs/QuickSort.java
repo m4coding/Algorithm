@@ -4,7 +4,7 @@ package com.mcs;
 /**
  * @author mochangsheng
  * @version 1.0
- * @description 该类的主要功能描述
+ * @description 快速排序
  * @created 2017/2/17
  * @changeRecord [修改记录] <br/>
  */

@@ -3,7 +3,7 @@ package com.mcs;
 /**
  * @author mochangsheng
  * @version 1.0
- * @description 该类的主要功能描述
+ * @description 希尔排序（最小增量排序）
  * @created 2017/2/16
  * @changeRecord [修改记录] <br/>
  */

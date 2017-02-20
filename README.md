@@ -166,3 +166,62 @@
 
         traverse(array);
     }
+
+- 快速排序
+
+基本思想：选择一个基准元素，通常选择第一个元素或者最后一个元素，通过一趟扫描，将待排序分成两部分，一部分比基准元素小，一部分大于等于基准元素，此时基准元素在其排好序后的正确位置，然后再用同样的方法递归地划分剩下的两部分。
+
+实现：（从小到大）
+
+	//开始排序
+	public void sort(int[] array) {
+        if (array == null || array.length == 0) {
+            System.out.println(Constant.ERROR_ARRAY_EMPTY);
+            return;
+        }
+        quickSort(array, 0, array.length-1);
+        traverse(array);
+    }
+
+	//将数组分成两部分
+    private int getMiddle(int[] array, int low, int high) {
+        int temp = array[low];//数组的第一个作为中轴
+
+        while (low < high) {
+
+            while (low < high && temp <= array[high]) {
+                high--;
+            }
+            array[low] = array[high];//比中轴小的记录移到低端
+
+            while (low < high && temp >= array[low]) {
+                low++;
+            }
+            array[high] = array[low];//比中轴大的记录移到高端
+
+            //System.out.println(String.format(Locale.US,"===getMiddle low==%d,high==%d", low, high));
+        }
+
+        array[low] = temp;
+
+        return low;//返回中轴的位置
+    }
+
+	//递归调用
+    private void quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            int middle = getMiddle(array, low, high);
+            quickSort(array, low, middle-1);
+            quickSort(array, middle+1, high);
+        }
+    }
+
+
+##归并排序
+
+基本思想：归并排序法是将两个（或两个以上）有序表合并成一个新的有序表，即把待排序序列分成若干个序列，每个子序列是有序的。然后再把有序子序列合并成整体有序序列。
+
+
+##基数排序
+
+基本思想：将所有待比较数值（正整数）统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后，数列就变成一个有序序列。

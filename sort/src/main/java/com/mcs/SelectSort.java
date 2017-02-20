@@ -3,7 +3,7 @@ package com.mcs;
 /**
  * @author mochangsheng
  * @version 1.0
- * @description 该类的主要功能描述
+ * @description 简单选择排序
  * @created 2017/2/16
  * @changeRecord [修改记录] <br/>
  */
