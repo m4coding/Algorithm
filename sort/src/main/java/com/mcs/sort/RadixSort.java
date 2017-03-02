@@ -1,4 +1,4 @@
-package com.mcs;
+package com.mcs.sort;
 
 import java.util.ArrayList;
 import java.util.List;

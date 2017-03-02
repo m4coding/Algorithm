@@ -1,4 +1,4 @@
-package com.mcs;
+package com.mcs.sort;
 
 
 /**
